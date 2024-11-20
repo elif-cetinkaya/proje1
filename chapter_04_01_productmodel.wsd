@@ -1,0 +1,35 @@
+@startuml class Diyagram
+title product Model
+CLASS product{
+    -name
+    -price
+    -quantity
+    --
+    +getName()
+    +getPrice()
+    +getQuantity()
+    --
+    +setName(value)
+    +setPrice(value)
+    +setQuantity(value)
+    --
+    +product(name, price, quantity)
+    --
+    +getTotalPrice()
+    +toString() 
+}
+
+class object {
+  
+}
+
+product -up-> object : "<<extends>>"
+
+hide empty members
+
+CLASS ProductHelper {
+    +createItemFromText().
+    +getBalance().
+}
+ProductHelper -left-> object : "<<extends>>"
+@enduml
